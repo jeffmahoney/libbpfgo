@@ -3,7 +3,7 @@ package libbpfgo
 /*
 #cgo !libbpfgo_full_static LDFLAGS: -lelf -lz
 
-#cgo  libbpfgo_full_static CFLAGS: -I${SRCDIR}/output
+#cgo  libbpfgo_full_static CFLAGS: -I${SRCDIR}/output -I${SRCDIR}/include/uapi
 #cgo  libbpfgo_full_static LDFLAGS: ${SRCDIR}/output/libbpf.a -l:libelf.a -l:libz.a
 
 #include "libbpfgo.h"
