@@ -2,10 +2,10 @@ package libbpfgo
 
 /*
 #cgo  libbpfgo_static CFLAGS: -I${SRCDIR}/output -I${SRCDIR}/include/uapi
-#cgo  libbpfgo_static LDFLAGS: ${SRCDIR}/output/libbpf.a -lelf -lz
+#cgo  libbpfgo_static LDFLAGS: ${SRCDIR}/output/libbpf.a -lelf -lz -lzstd
 
 #cgo  libbpfgo_full_static CFLAGS: -I${SRCDIR}/output -I${SRCDIR}/include/uapi
-#cgo  libbpfgo_full_static LDFLAGS: ${SRCDIR}/output/libbpf.a -l:libelf.a -l:libz.a
+#cgo  libbpfgo_full_static LDFLAGS: ${SRCDIR}/output/libbpf.a -l:libelf.a -l:libz.a -l:libzstd.a
 
 #include "libbpfgo.h"
 */
