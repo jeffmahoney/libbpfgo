@@ -1,7 +1,11 @@
 package libbpfgo
 
 /*
-#cgo LDFLAGS: -lelf -lz
+#cgo !libbpfgo_static LDFLAGS: -lelf -lz -lzstd
+
+#cgo  libbpfgo_static CFLAGS: -I${SRCDIR}/output
+#cgo  libbpfgo_static LDFLAGS: ${SRCDIR}/output/libbpf.a -l:libelf.a -lz -lzstd
+
 #include "libbpfgo.h"
 */
 import "C"
