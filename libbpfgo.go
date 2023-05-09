@@ -395,7 +395,6 @@ func NewModuleFromBufferArgs(args NewModuleArgs) (*Module, error) {
 	cBPFBuffSize := C.size_t(len(args.BPFObjBuff))
 
 	if len(args.KConfigFilePath) <= 2 {
-		C.free(unsafe.Pointer(cKconfigPath))
 		cKconfigPath = nil
 	}
 
